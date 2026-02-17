@@ -1,0 +1,27 @@
+import { NgOptimizedImage } from '@angular/common';
+@Component({
+  imports: [NgOptimizedImage],
+  ...
+})
+
+import { NgOptimizedImage } from '@angular/common';
+@Component({
+template: `     ...
+    <li>
+      Static Image:
+      <img ngSrc="/logo.svg" alt="Angular logo" width="32" height="32" />
+    </li>
+    <li>
+      Dynamic Image:
+      <img [ngSrc]="logoUrl" [alt]="logoAlt" width="32" height="32" />
+    </li>
+    ...
+  `,
+imports: [NgOptimizedImage],
+})
+
+
+// Container div has 'position: "relative"'
+<div class="image-container">
+  <img ngSrc="www.example.com/image.png" fill />
+</div>

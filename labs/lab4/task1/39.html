@@ -1,0 +1,36 @@
+...
+import { RouterLink, RouterOutlet } from '@angular/router';
+@Component({
+  imports: [RouterLink, RouterOutlet],
+  ...
+})
+
+import { RouterLink, RouterOutlet } from '@angular/router';
+@Component({
+  ...
+  template: `
+    ...
+    <a routerLink="/">Home</a>
+    <a routerLink="/user">User</a>
+    ...
+  `,
+  imports: [RouterLink, RouterOutlet],
+})
+
+
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <nav>
+      <a href="/">Home</a>
+      |
+      <a href="/user">User</a>
+    </nav>
+    <router-outlet />
+  `,
+  imports: [RouterOutlet],
+})
+export class App {}

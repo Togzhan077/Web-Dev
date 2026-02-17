@@ -1,0 +1,8 @@
+export class App {
+  isEditable = true;
+}
+
+@Component({
+  ...
+  template: `<div [contentEditable]="isEditable"></div>`,
+})

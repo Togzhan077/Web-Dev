@@ -1,0 +1,57 @@
+@Component({
+  selector: 'app-user',
+  template: `
+    ...
+    <p>Framework: {{ favoriteFramework }}</p>
+    <label for="framework">
+      Favorite Framework:
+      <input id="framework" type="text" [(ngModel)]="favoriteFramework" />
+    </label>
+  `,
+})
+export class User {
+  favoriteFramework = '';
+}
+
+
+...
+@Component({
+  selector: 'app-user',
+  template: `
+    ...
+    <button (click)="showFramework()">Show Framework</button>
+  `,
+  ...
+})
+export class User {
+  favoriteFramework = '';
+  ...
+  showFramework() {
+    alert(this.favoriteFramework);
+  }
+}
+
+
+import {Component} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+
+@Component({
+  selector: 'app-user',
+  template: `
+    <p>Username: {{ username }}</p>
+    <p>Framework:</p>
+    <label for="framework">
+      Favorite Framework:
+      <input id="framework" type="text" [(ngModel)]="favoriteFramework" />
+    </label>
+    <button (click)="showFramework()">Show Framework</button>
+  `,
+  imports: [FormsModule],
+})
+export class User {
+  favoriteFramework = '';
+  username = 'youngTech';
+
+  showFramework() {}
+}
+
