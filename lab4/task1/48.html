@@ -1,0 +1,41 @@
+import {Pipe, PipeTransform} from '@angular/core';
+@Pipe({
+  name: 'star',
+})
+export class StarPipe implements PipeTransform {
+  transform(value: string): string {
+    return `⭐️ ${value} ⭐️`;
+  }
+}
+
+@Pipe({
+  name: 'reverse'
+})
+
+export class ReversePipe implements PipeTransform {
+  transform(value: string): string {
+    let reverse = '';
+    for (let i = value.length - 1; i >= 0; i--) {
+      reverse += value[i];
+    }
+    return reverse;
+  }
+}
+
+
+@Component({
+  ...
+  template: `Reverse Machine: {{ word | reverse }}`
+  imports: [ReversePipe]
+})
+
+import {ReversePipe} from './reverse.pipe';
+
+@Component({
+  selector: 'app-root',
+  template: ` Reverse Machine: {{ word }} `,
+  imports: [],
+})
+export class App {
+  word = 'You are a champion';
+}
