@@ -1,0 +1,11 @@
+<div class="categories">
+  <button *ngFor="let category of categories" (click)="selectCategory(category.id)">
+    {{ category.name }}
+  </button>
+</div>
+
+<div *ngIf="selectedCategoryId === null">
+  <p>Категория таңдаңыз.</p>
+</div>
+
+<app-product-list *ngIf="selectedCategoryId !== null" [products]="products"></app-product-list>

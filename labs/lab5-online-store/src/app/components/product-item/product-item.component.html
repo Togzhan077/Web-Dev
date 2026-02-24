@@ -1,0 +1,10 @@
+<div class="product-item">
+  <img [src]="product.imageUrl" alt="{{ product.name }}">
+  <h3>{{ product.name }}</h3>
+  <p>{{ product.description }}</p>
+  <p>Бағасы: {{ product.price }}</p>
+  <p>Рейтинг: {{ product.rating }}</p>
+  <p>Лайк саны: {{ product.likes }} ❤</p>
+  <button (click)="onLikeProduct()">Лайк</button>
+  <button (click)="onDeleteProduct()">Жою</button>
+</div>
