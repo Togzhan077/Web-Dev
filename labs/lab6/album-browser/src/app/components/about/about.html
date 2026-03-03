@@ -1,0 +1,7 @@
+<div class="about">
+  <h1>About</h1>
+  <p>This application was built as part of Web Development Lab 6.</p>
+  <p><strong>Author:</strong> Anatoliy</p>
+  <p><strong>Course:</strong> Web Development</p>
+  <p><strong>API:</strong> JSONPlaceholder</p>
+</div>
